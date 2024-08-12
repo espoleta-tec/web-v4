@@ -4,8 +4,9 @@
 	import { LandingPage } from '$lib';
 </script>
 
+<!-- Head section -->
 <img src="/bg-pattern.svg" alt="" class="min-w-full min-h-full absolute top-0 left-0 -z-10" />
-<header class="flex flex-row p-8">
+<header class="flex flex-row py-8">
 	<div class="flex flex-row items-center gap-2">
 		<img src="/logo.svg" class="h-10" alt="ESPOLETA" />
 		<div class="text-green-800">
@@ -62,3 +63,65 @@
 		<circle cx="0.5" cy="0.5" r="0.2" />
 	</clipPath>
 </svg>
+
+<!-- Our products -->
+<section class="flex flex-col gap-8">
+	<div
+		class="text-5xl text-green-800 font-regular font-display text-center flex flex-row justify-center"
+	>
+		<div class="w-1/2">
+			{LandingPage.our_products_title}
+		</div>
+	</div>
+
+	<div>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis molestiae labore eveniet
+		maiores est soluta magni id, quis velit nisi laborum porro nihil necessitatibus magnam modi
+		expedita aperiam natus!
+	</div>
+
+	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+		<div class="bg-green-600 text-white text-center">a</div>
+		<div class="bg-green-600 text-white text-center">b</div>
+		<div class="bg-green-600 text-white text-center">c</div>
+		<div class="bg-green-600 text-white text-center">d</div>
+	</div>
+</section>
+
+<!-- Our Clients -->
+<section class="mt-16">
+	<div
+		class="text-5xl text-green-800 font-regular font-display flex flex-row justify-center uppercase"
+	>
+		Nuestros Clientes
+	</div>
+	<div class="grid grid-cols-4">
+		<div>a</div>
+		<div>a</div>
+		<div>a</div>
+		<div>a</div>
+	</div>
+</section>
+
+<!-- Features -->
+<section class="mt-16 gap-8 flex flex-row flex-wrap">
+	<div class="flex flex-col gap-8 w-full lg:w-7/12">
+		<div
+			class="text-5xl text-green-800 font-regular font-display flex flex-row justify-center uppercase"
+		>
+			Vortice es una estaciones de altas prestaciones a un precio inigualable
+		</div>
+		<div>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum neque officiis maxime quo
+			corrupti ipsa id molestias, impedit quam. Amet explicabo natus necessitatibus similique ullam
+			enim consequatur doloribus, eum itaque!
+		</div>
+		<div>
+			<span
+				class="text-white bg-green-800 p-2 hover:text-green-800 hover:bg-transparent hover:cursor-pointer hover:border-2 hover:border-green-800 uppercase"
+				>seleccione el producto para visualizar</span
+			>
+		</div>
+	</div>
+	<div class=" bg-green-800 flex-grow">lol</div>
+</section>

@@ -13,6 +13,7 @@ collections:
     files:
       - label: "Landing"
         name: "landing"
-        file: "lib/content/landing.json"
+        file: "src/lib/content/landing.json"
         fields:
           - {label: Title, name: title, widget: string}
+          - {label: Our Products Title , name: our_products_title , widget: string}
