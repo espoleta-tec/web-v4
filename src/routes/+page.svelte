@@ -125,3 +125,10 @@
 	</div>
 	<div class=" bg-green-800 flex-grow">lol</div>
 </section>
+
+<footer class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-16">
+	<div>a</div>
+	<div>a</div>
+	<div>a</div>
+	<div>a</div>
+</footer>
