@@ -1,31 +1,9 @@
 <script>
-	import { Icon } from 'svelte-icons-pack';
-	import { FaSolidMagnifyingGlass } from 'svelte-icons-pack/fa';
 	import { LandingPage } from '$lib';
 </script>
 
 <!-- Head section -->
 <img src="/bg-pattern.svg" alt="" class="min-w-full min-h-full absolute top-0 left-0 -z-10" />
-<header class="flex flex-row py-8">
-	<div class="flex flex-row items-center gap-2">
-		<img src="/logo.svg" class="h-10" alt="ESPOLETA" />
-		<div class="text-green-800">
-			<div><span class="font-bold">ESPOLETA</span> Tecnologías</div>
-			<div class="text-xs">You need it. We make it true.</div>
-		</div>
-	</div>
-	<div class="flex-grow"></div>
-	<div
-		class="uppercase flex lg:flex-row flex-col gap-4 items-center text-green-800 font-medium text-center"
-	>
-		<div class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">asistencia</div>
-		<div class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">quienes somos</div>
-		<div class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">contactenos</div>
-		<div class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">blog</div>
-		<div class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">tienda</div>
-		<Icon src={FaSolidMagnifyingGlass} />
-	</div>
-</header>
 
 <div class="flex flex-col lg:flex-row my-8">
 	<div
