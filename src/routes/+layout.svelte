@@ -13,7 +13,7 @@
 	/>
 </svelte:head>
 
-<header class="flex flex-row py-8">
+<header class="flex flex-row py-8 px-16 bg-gray-50 shadow-sm w-full sticky top-0 left-0 z-50">
 	<a href="/" class="flex flex-row items-center gap-2 hover:cursor-pointer">
 		<img src="/logo.svg" class="h-10" alt="ESPOLETA" />
 		<div class="text-green-800">
@@ -42,7 +42,5 @@
 <style lang="postcss">
 	:global(html) {
 		background-color: theme(colors.gray.50);
-
-		@apply mx-16;
 	}
 </style>

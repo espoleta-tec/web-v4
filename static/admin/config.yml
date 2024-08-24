@@ -7,6 +7,12 @@ local_backend: true
 media_folder: 'static/images/uploads'
 public_folder: 'images/uploads'
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: lazaroofarrill
+    api_key: 476522667641615
+
 collections:
   - label: "Pages"
     name: "pages"
@@ -17,3 +23,4 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Our Products Title , name: our_products_title , widget: string}
+          - {label: 'Header Image', name: 'header_image', widget: image}
