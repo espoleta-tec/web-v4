@@ -1,5 +1,7 @@
 <script>
 	const team = new Array(5).fill(0);
+	import { base } from '$app/paths';
+	import { LandingPage } from '$lib';
 </script>
 
 <section>
@@ -56,7 +58,7 @@
 		{#each team as member, i}
 			<div class="flex flex-col items-center">
 				<img
-					src="/station.png"
+					src={LandingPage.header_image}
 					alt="placeholder"
 					class="w-[195px] h-[280px] object-contain bg-black"
 				/>

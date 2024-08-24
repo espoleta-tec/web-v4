@@ -1,7 +1,6 @@
 <script>
 	import '../app.css';
-	import { Icon } from 'svelte-icons-pack';
-	import { FaSolidMagnifyingGlass } from 'svelte-icons-pack/fa';
+	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -14,8 +13,8 @@
 </svelte:head>
 
 <header class="flex flex-row py-8 px-16 bg-gray-50 shadow-sm w-full sticky top-0 left-0 z-50">
-	<a href="/" class="flex flex-row items-center gap-2 hover:cursor-pointer">
-		<img src="/logo.svg" class="h-10" alt="ESPOLETA" />
+	<a href="{base}/" class="flex flex-row items-center gap-2 hover:cursor-pointer">
+		<img src="{base}/logo.svg" class="h-10" alt="ESPOLETA" />
 		<div class="text-green-800">
 			<div><span class="font-bold">ESPOLETA</span> Tecnologías</div>
 			<div class="text-xs">You need it. We make it true.</div>
@@ -25,15 +24,18 @@
 	<div
 		class="uppercase flex lg:flex-row flex-col gap-4 items-center text-green-800 font-medium text-center"
 	>
-		<a href="/" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">asistencia</a>
-		<a href="/about-us" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">
+		<a href="{base}/" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
+			>asistencia</a
+		>
+		<a href="{base}/about-us" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">
 			quienes somos
 		</a>
-		<a href="/contact" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
+		<a href="{base}/contact" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
 			>contactenos</a
 		>
-		<a href="/" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">blog</a>
-		<a href="/" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">tienda</a>
+		<a href="{base}/" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">blog</a>
+		<a href="{base}/" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">tienda</a
+		>
 	</div>
 </header>
 
