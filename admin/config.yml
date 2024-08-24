@@ -1,9 +1,22 @@
 backend:
-  name: github
-  repo: espoleta-tec/web-v4
+  name: git-gateway
   branch: main
   
 local_backend: true
+
+i18n:
+  # Required and can be one of multiple_folders, multiple_files or single_file
+  # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
+  # multiple_files - persists files in `<folder>/<slug>.<locale>.<extension>`
+  # single_file - persists a single file in `<folder>/<slug>.<extension>`
+  structure: multiple_folders
+
+  # Required - a list of locales to show in the editor UI
+  locales: [en, es]
+
+  # Optional, defaults to the first item in locales.
+  # The locale to be used for fields validation and as a baseline for the entry.
+  default_locale: en
 
 media_folder: 'static/images/uploads'
 public_folder: 'images/uploads'
@@ -17,11 +30,20 @@ media_library:
 collections:
   - label: "Pages"
     name: "pages"
+    i18n:
+      structure: single_file
+      locales: [en, es]
     files:
       - label: "Landing"
         name: "landing"
         file: "src/lib/content/landing.json"
+        i18n: true
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Our Products Title , name: our_products_title , widget: string}
+          - {label: Title, name: title, widget: string, i18n: true}
           - {label: 'Header Image', name: 'header_image', widget: image}
+          - {label: Our Products Title , name: our_products_title , widget: string, i18n: true}
+          - {label: Our Products Body , name: our_products_body , widget: text, i18n: true}
+          - {label: Our Clients, name: our_clients, widget: string, i18n: true}
+          - {label: Features Title, name: station_features, widget: string, i18n: true}
+          - {label: Features Body, name: station_features_body, widget: string, i18n: true}
+
