@@ -1,6 +1,6 @@
 <script>
-	const team = new Array(5).fill(0);
-	import { LandingPage } from '$lib';
+	export let data;
+	const locale = data.locale;
 </script>
 
 <section class="px-16">
@@ -54,15 +54,15 @@
 	</div>
 
 	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
-		{#each team as member, i}
+		{#each data.team_members as member, i}
 			<div class="flex flex-col items-center">
 				<img
-					src={LandingPage.header_image}
+					src={member.en.photo}
 					alt="placeholder"
-					class="w-[195px] h-[280px] object-contain bg-black"
+					class="aspect-square h-[280px] object-contain"
 				/>
-				<div class="text-green-600 text-xl">El increible hombre arana</div>
-				<div class="text-sm text-gray-600 self-start">Se pega a todo.</div>
+				<div class="text-green-600 text-xl">{member.en.name}</div>
+				<div class="text-sm text-gray-600 self-start">{member[locale].description}</div>
 			</div>
 		{/each}
 	</div>

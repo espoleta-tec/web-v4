@@ -1,0 +1,18 @@
+{
+  "en": {
+    "about_the_company": {
+      "company_points": [
+        {
+          "point_title": "Razon de ser",
+          "point_body": "Somos los que somos porque si."
+        }
+      ],
+      "title": "Acerca de ESPOLETA"
+    }
+  },
+  "es": {
+    "about_the_company": {
+      "title": "About ESPOLETA"
+    }
+  }
+}

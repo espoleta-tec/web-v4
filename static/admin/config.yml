@@ -4,12 +4,14 @@ backend:
   
 local_backend: true
 
+extension: json
+
 i18n:
   # Required and can be one of multiple_folders, multiple_files or single_file
   # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
   # multiple_files - persists files in `<folder>/<slug>.<locale>.<extension>`
   # single_file - persists a single file in `<folder>/<slug>.<extension>`
-  structure: multiple_folders
+  structure: single_file
 
   # Required - a list of locales to show in the editor UI
   locales: [en, es]
@@ -46,4 +48,34 @@ collections:
           - {label: Our Clients, name: our_clients, widget: string, i18n: true}
           - {label: Features Title, name: station_features, widget: string, i18n: true}
           - {label: Features Body, name: station_features_body, widget: string, i18n: true}
+      - label: About Us
+        name: about_us
+        file: src/lib/content/about_us.json
+        i18n: true
+        fields:
+          - label: Obout the company
+            name: about_the_company
+            i18n: true
+            widget: object
+            fields:
+              - {label: Title, name: title, i18n: true, widget: string}
+              - label: Company points
+                name: company_points
+                widget: list
+                i18n: true
+                fields:
+                  - {label: Title, name: point_title, widget: string, i18n: true}
+                  - {label: Body, name: point_body, widget: text, i18n: true}
+            
+  - label: Team Member
+    name: team_members
+    folder: 'src/lib/content/team_members'
+    extension: json
+    create: true
+    identifier_field: name
+    i18n: true
+    fields:
+      - {label: "Name", name: 'name', widget: string}
+      - {label: 'Description', name: 'description', widget: text, i18n: true}
+      - {label: 'Photo', name: 'photo', widget: image}
 

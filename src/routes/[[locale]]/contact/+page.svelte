@@ -1,5 +1,5 @@
 <script>
-	const contactSections = Array(5).fill();
+	const contactSections = Array(5).fill(0);
 </script>
 
 <section class="flex flex-col gap-8 px-16">
