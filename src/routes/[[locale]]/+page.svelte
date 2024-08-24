@@ -1,4 +1,9 @@
 <script>
+	export let data;
+
+	/** @type{ 'en' | 'es' } */
+	const locale = data.locale;
+
 	import { LandingPage } from '$lib';
 </script>
 
@@ -7,15 +12,15 @@
 	<img
 		src="/bg-pattern.svg"
 		alt=""
-		class="min-w-full min-h-full overflow-hidden absolute top-0 left-0 -z-10 opacity-60"
+		class="min-w-full min-h-full overflow-hidden absolute top-0 left-0 -z-10 opacity-40 object-cover"
 	/>
 
 	<div class="flex flex-col lg:flex-row">
 		<div
-			class="text-6xl text-green-800 font-regular w-full lg:w-1/3 font-display flex flex-col justify-center"
+			class="text-6xl text-green-800 font-regular w-full lg:w-1/3 font-display flex flex-col justify-center py-8"
 		>
 			<div class="text-center lg:text-start">
-				{LandingPage.title}
+				{LandingPage[locale].title}
 			</div>
 		</div>
 		<div class="w-full lg:w-1/3 flex frow justify-center relative">
@@ -23,7 +28,7 @@
 				class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 aspect-square bg-gray-400 bg-opacity-10 backdrop-blur-[2px]"
 				style="clip-path: url(#cp);"
 			></div>
-			<img src={LandingPage.header_image} alt="vortice-station" />
+			<img src={LandingPage.en.header_image} alt="vortice-station" />
 		</div>
 	</div>
 
@@ -54,7 +59,7 @@
 		class="text-5xl text-green-800 font-regular font-display text-center flex flex-row justify-center"
 	>
 		<div class="w-1/2">
-			{LandingPage.our_products_title}
+			{LandingPage[locale].our_products_title}
 		</div>
 	</div>
 
@@ -75,9 +80,9 @@
 <!-- Our Clients -->
 <section class="py-8 px-16">
 	<div
-		class="text-5xl text-green-800 font-regular font-display flex flex-row justify-center uppercase"
+		class="text-5xl text-green-800 font-regular font-display flex flex-row justify-center uppercase text-center"
 	>
-		Nuestros Clientes
+		{LandingPage[locale].our_clients}
 	</div>
 	<div class="grid grid-cols-4">
 		<div>a</div>
@@ -93,12 +98,10 @@
 		<div
 			class="text-5xl text-green-800 font-regular font-display flex flex-row justify-center uppercase"
 		>
-			Vortice es una estaciones de altas prestaciones a un precio inigualable
+			{LandingPage[locale].station_features}
 		</div>
 		<div>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum neque officiis maxime quo
-			corrupti ipsa id molestias, impedit quam. Amet explicabo natus necessitatibus similique ullam
-			enim consequatur doloribus, eum itaque!
+			{LandingPage[locale].station_features_body}
 		</div>
 		<div>
 			<span

@@ -2,7 +2,7 @@
 	const contactSections = Array(5).fill();
 </script>
 
-<section class="flex flex-col gap-8">
+<section class="flex flex-col gap-8 px-16">
 	<div class="text-5xl text-green-800 font-display font-medium">Contactos</div>
 
 	<div>Investigación y producción de aplicaciones tecnológicas bajo demanda.</div>
@@ -19,7 +19,7 @@
 	</div>
 </section>
 
-<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 grid-flow-dense">
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 grid-flow-dense px-16">
 	<div class="lg:col-start-2">
 		<div class="text-4xl text-green-800 font-display font-medium mb-4">
 			Necesita soporte tecnico

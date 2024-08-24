@@ -3,7 +3,7 @@
 	import { LandingPage } from '$lib';
 </script>
 
-<section>
+<section class="px-16">
 	<div class="font-display text-5xl text-green-800 font-medium mb-8">ESPOLETA Tecnologías</div>
 
 	<div class="grid grid-cols-1 lg:grid-cols-2 gap-4" style="align-items: start">
@@ -45,7 +45,7 @@
 	</div>
 </section>
 
-<section class="mt-16 flex flex-col items-center gap-8">
+<section class="mt-16 flex flex-col items-center gap-8 px-16">
 	<div class="font-display text-5xl text-green-800 font-medium">The team</div>
 	<div class="lg:w-1/2">
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eum autem deleniti ducimus porro,

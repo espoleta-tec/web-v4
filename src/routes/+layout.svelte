@@ -1,5 +1,10 @@
 <script>
 	import '../app.css';
+
+	export let data;
+
+	/** @type{'en' | 'es'} */
+	const locale = data.locale;
 </script>
 
 <svelte:head>
@@ -12,7 +17,7 @@
 </svelte:head>
 
 <header class="flex flex-row py-8 px-16 bg-gray-50 shadow-sm w-full sticky top-0 left-0 z-50">
-	<a href="/" class="flex flex-row items-center gap-2 hover:cursor-pointer">
+	<a href="/{locale}" class="flex flex-row items-center gap-2 hover:cursor-pointer">
 		<img src="/logo.svg" class="h-10" alt="ESPOLETA" />
 		<div class="text-green-800">
 			<div><span class="font-bold">ESPOLETA</span> Tecnologías</div>
@@ -21,18 +26,36 @@
 	</a>
 	<div class="flex-grow"></div>
 	<div
-		class="uppercase flex lg:flex-row flex-col gap-4 items-center text-green-800 font-medium text-center"
+		class="uppercase hidden lg:flex lg:flex-row flex-col gap-4 items-center text-green-800 font-medium text-center"
 	>
-		<a href="/about-us" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">
+		<a
+			href="/{locale}/about-us"
+			class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
+		>
 			quienes somos
 		</a>
-		<a href="/contact" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
+		<a href="/{locale}/contact" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
 			>contactenos</a
 		>
-		<a href="/blog" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">blog</a>
+		<a href="/{locale}/blog" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
+			>blog</a
+		>
 		<a
 			href="https://store.espoletatecnologias.com"
 			class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">tienda</a
+		>
+	</div>
+	<div class="flex flex-row items-center pl-16">
+		<a
+			data-sveltekit-reload
+			class="mx-2 px-2 {locale === 'es' ? 'bg-green-800 text-white' : ''}"
+			href="/es">ES</a
+		>
+		/
+		<a
+			data-sveltekit-reload
+			class="mx-2 px-2 {locale === 'en' ? 'bg-green-800 text-white' : ''}"
+			href="/en">EN</a
 		>
 	</div>
 </header>
