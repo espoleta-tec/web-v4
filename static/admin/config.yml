@@ -66,6 +66,8 @@ collections:
                 fields:
                   - {label: Title, name: point_title, widget: string, i18n: true}
                   - {label: Body, name: point_body, widget: text, i18n: true}
+              - {label: The Team Title, name: the_team_title, widget: string, i18n: true}
+              - {label: The Team Body, name: the_team_body, widget: text, i18n: true}
             
   - label: Team Member
     name: team_members

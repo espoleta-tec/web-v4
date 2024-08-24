@@ -61,6 +61,8 @@
 
 <slot />
 
+<section class="p-16 mt-16 bg-gray-100">The footer</section>
+
 <style lang="postcss">
 	:global(html) {
 		background-color: theme(colors.gray.50);

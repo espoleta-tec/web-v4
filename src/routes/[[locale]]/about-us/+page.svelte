@@ -1,56 +1,32 @@
 <script>
 	export let data;
-	const locale = data.locale;
+
+	const { about_us_page, locale } = data;
+
+	const { company_points } = about_us_page.about_the_company;
 </script>
 
 <section class="px-16">
-	<div class="font-display text-5xl text-green-800 font-medium mb-8">ESPOLETA Tecnologías</div>
+	<div class="font-display text-5xl text-green-800 font-medium mb-8 py-8">
+		{about_us_page.about_the_company.title}
+	</div>
 
 	<div class="grid grid-cols-1 lg:grid-cols-2 gap-4" style="align-items: start">
-		<div>
-			<div class="text-green-700 font-medium">Razon de ser</div>
+		{#each company_points as point, i}
 			<div>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates architecto voluptatem
-				eligendi inventore repellendus voluptas mollitia ipsa, veniam doloremque, deleniti libero et
-				magnam id, itaque vel. Alias quo odit molestias?
+				<div class="text-green-700 font-medium">{point.point_title}</div>
+				<div>{point.point_body}</div>
 			</div>
-		</div>
-
-		<div class="lg:row-span-2">
-			<div class="text-green-700 font-medium">Experiencia</div>
-			<div>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident itaque fugit, error
-				repellendus illo quae, adipisci nam officia molestias dignissimos, quasi necessitatibus
-				voluptate id repudiandae minima tempore obcaecati? Praesentium, laudantium. Lorem ipsum
-				dolor sit amet consectetur adipisicing elit. Debitis iste accusamus soluta voluptate ducimus
-				quos rerum magnam saepe dignissimos qui! Natus facilis laudantium aliquam consequuntur enim
-				deleniti asperiores, distinctio laboriosam.
-			</div>
-		</div>
-
-		<div>
-			<div class="text-green-700 font-medium">Trayectoria</div>
-			<div>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus blanditiis facilis,
-				omnis delectus consectetur velit perferendis aliquam, impedit earum vero, totam nesciunt
-				necessitatibus! Repudiandae velit reiciendis fugiat, ipsa excepturi totam! <br />
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste ratione voluptatum consequatur
-				debitis quibusdam quam nemo voluptate! Saepe vero dicta a laborum hic at error placeat reprehenderit
-				aspernatur? Natus, quod?<br />
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sint, magnam eius ducimus
-				reiciendis dicta! Tenetur quo deserunt reiciendis facere. Vitae, dolorem nisi nostrum culpa sint
-				deleniti officiis rerum. Similique?
-			</div>
-		</div>
+		{/each}
 	</div>
 </section>
 
-<section class="mt-16 flex flex-col items-center gap-8 px-16">
-	<div class="font-display text-5xl text-green-800 font-medium">The team</div>
-	<div class="lg:w-1/2">
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eum autem deleniti ducimus porro,
-		possimus nulla voluptates sequi dolores quo, maxime nobis praesentium sapiente ullam atque
-		recusandae blanditiis voluptatem amet?
+<section class="mt-8 flex flex-col items-center gap-8 px-16">
+	<div class="font-display text-5xl text-green-800 font-medium">
+		{about_us_page.about_the_company.the_team_title}
+	</div>
+	<div class="lg:w-3/4">
+		{about_us_page.about_the_company.the_team_body}
 	</div>
 
 	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">

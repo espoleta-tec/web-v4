@@ -5,14 +5,40 @@
         {
           "point_title": "Razon de ser",
           "point_body": "Somos los que somos porque si."
+        },
+        {
+          "point_title": "Discover excellence",
+          "point_body": "in everything we do. Our mission is to provide high-quality services that meet your needs and exceed your expectations."
+        },
+        {
+          "point_title": "Design",
+          "point_body": "Creative solutions that capture your brand's essence."
         }
       ],
-      "title": "Acerca de ESPOLETA"
+      "title": "About ESPOLETA",
+      "the_team_title": "The team",
+      "the_team_body": "Our team is the backbone of our success, a dynamic group of dedicated professionals who bring a wealth of experience and expertise to the table. Each member is not only highly skilled in their respective fields but also shares a passion for innovation and a commitment to excellence. We foster a collaborative environment where creativity thrives, and diverse ideas are encouraged, ensuring that we tackle challenges with a fresh perspective. By prioritizing open communication and teamwork, we consistently exceed expectations and deliver outstanding results for our clients. Together, we are not just a team; we are a family driven by a shared vision of success and growth."
     }
   },
   "es": {
     "about_the_company": {
-      "title": "About ESPOLETA"
+      "title": "Acerca de ESPOLETA",
+      "company_points": [
+        {
+          "point_title": "Reason of existance.",
+          "point_body": "We are who we are."
+        },
+        {
+          "point_title": "Discover excellence",
+          "point_body": "in everything we do. Our mission is to provide high-quality services that meet your needs and exceed your expectations."
+        },
+        {
+          "point_title": "Diseño",
+          "point_body": "Soluciones creativas que capturan la esencia de tu marca."
+        }
+      ],
+      "the_team_title": "El Equipo",
+      "the_team_body": "Nuestro equipo es la columna vertebral de nuestro éxito, un grupo dinámico de profesionales dedicados que aportan una gran cantidad de experiencia y conocimientos a la mesa. Cada miembro no solo es altamente calificado en sus respectivos campos, sino que también comparte una pasión por la innovación y un compromiso con la excelencia. Fomentamos un ambiente de colaboración donde la creatividad florece, y se alientan las ideas diversas, asegurando que abordemos los desafíos con una perspectiva fresca. Al priorizar la comunicación abierta y el trabajo en equipo, superamos constantemente las expectativas y entregamos resultados sobresalientes para nuestros clientes. Juntos, no somos solo un equipo; somos una familia impulsada por una visión compartida de éxito y crecimiento."
     }
   }
 }
