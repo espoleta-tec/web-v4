@@ -1,12 +1,11 @@
 <script>
 	import { LandingPage } from '$lib';
-	import { base } from '$app/paths';
 </script>
 
 <!-- Head section -->
 <section class="relative py-8 overflow-hidden px-16">
 	<img
-		src="{base}/bg-pattern.svg"
+		src="/bg-pattern.svg"
 		alt=""
 		class="min-w-full min-h-full overflow-hidden absolute top-0 left-0 -z-10 opacity-60"
 	/>

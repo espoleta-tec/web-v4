@@ -1,6 +1,5 @@
 <script>
 	const team = new Array(5).fill(0);
-	import { base } from '$app/paths';
 	import { LandingPage } from '$lib';
 </script>
 
