@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: main
-  
+
 local_backend: true
 
 extension: json
@@ -30,24 +30,49 @@ media_library:
     api_key: 476522667641615
 
 collections:
-  - label: "Pages"
-    name: "pages"
+  - label: 'Pages'
+    name: 'pages'
     i18n:
       structure: single_file
       locales: [en, es]
     files:
-      - label: "Landing"
-        name: "landing"
-        file: "src/lib/content/landing.json"
+      - label: 'Landing'
+        name: 'landing'
+        file: 'src/lib/content/landing.json'
         i18n: true
         fields:
-          - {label: Title, name: title, widget: string, i18n: true}
-          - {label: 'Header Image', name: 'header_image', widget: image}
-          - {label: Our Products Title , name: our_products_title , widget: string, i18n: true}
-          - {label: Our Products Body , name: our_products_body , widget: text, i18n: true}
-          - {label: Our Clients, name: our_clients, widget: string, i18n: true}
-          - {label: Features Title, name: station_features, widget: string, i18n: true}
-          - {label: Features Body, name: station_features_body, widget: string, i18n: true}
+          - { label: Title, name: title, widget: string, i18n: true }
+          - { label: 'Header Image', name: 'header_image', widget: image }
+          - {
+              label: Our Products Title,
+              name: our_products_title,
+              widget: string,
+              i18n: true
+            }
+          - {
+              label: Our Products Body,
+              name: our_products_body,
+              widget: text,
+              i18n: true
+            }
+          - {
+              label: Our Clients,
+              name: our_clients,
+              widget: string,
+              i18n: true
+            }
+          - {
+              label: Features Title,
+              name: station_features,
+              widget: string,
+              i18n: true
+            }
+          - {
+              label: Features Body,
+              name: station_features_body,
+              widget: string,
+              i18n: true
+            }
       - label: About Us
         name: about_us
         file: src/lib/content/about_us.json
@@ -58,17 +83,32 @@ collections:
             i18n: true
             widget: object
             fields:
-              - {label: Title, name: title, i18n: true, widget: string}
+              - { label: Title, name: title, i18n: true, widget: string }
               - label: Company points
                 name: company_points
                 widget: list
                 i18n: true
                 fields:
-                  - {label: Title, name: point_title, widget: string, i18n: true}
-                  - {label: Body, name: point_body, widget: text, i18n: true}
-              - {label: The Team Title, name: the_team_title, widget: string, i18n: true}
-              - {label: The Team Body, name: the_team_body, widget: text, i18n: true}
-            
+                  - {
+                      label: Title,
+                      name: point_title,
+                      widget: string,
+                      i18n: true
+                    }
+                  - { label: Body, name: point_body, widget: text, i18n: true }
+              - {
+                  label: The Team Title,
+                  name: the_team_title,
+                  widget: string,
+                  i18n: true
+                }
+              - {
+                  label: The Team Body,
+                  name: the_team_body,
+                  widget: text,
+                  i18n: true
+                }
+
   - label: Team Member
     name: team_members
     folder: 'src/lib/content/team_members'
@@ -77,7 +117,6 @@ collections:
     identifier_field: name
     i18n: true
     fields:
-      - {label: "Name", name: 'name', widget: string}
-      - {label: 'Description', name: 'description', widget: text, i18n: true}
-      - {label: 'Photo', name: 'photo', widget: image}
-
+      - { label: 'Name', name: 'name', widget: string }
+      - { label: 'Description', name: 'description', widget: text, i18n: true }
+      - { label: 'Photo', name: 'photo', widget: image }
