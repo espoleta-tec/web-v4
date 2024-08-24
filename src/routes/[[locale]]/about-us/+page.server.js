@@ -8,7 +8,7 @@ export async function load({ params }) {
 	}
 
 	const about_us_page = await import('$lib/content/about_us.json').then(
-		(mod) => mod[params.locale]
+		(mod) => mod[params.locale ?? 'en']
 	);
 
 	return {
