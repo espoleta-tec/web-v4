@@ -1,6 +1,0 @@
-static/favicon.png filter=lfs diff=lfs merge=lfs -text
-static/logo.svg filter=lfs diff=lfs merge=lfs -text
-static/station.png filter=lfs diff=lfs merge=lfs -text
-static/admin filter=lfs diff=lfs merge=lfs -text
-static/bg-pattern.svg filter=lfs diff=lfs merge=lfs -text
-static/circles.svg filter=lfs diff=lfs merge=lfs -text
