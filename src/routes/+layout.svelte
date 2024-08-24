@@ -23,7 +23,6 @@
 	<div
 		class="uppercase flex lg:flex-row flex-col gap-4 items-center text-green-800 font-medium text-center"
 	>
-		<a href="/" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">asistencia</a>
 		<a href="/about-us" class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer">
 			quienes somos
 		</a>
