@@ -1,0 +1,10 @@
+{
+  "en": {
+    "title": "About Us",
+    "url": "/about-us",
+    "is_absolute": false
+  },
+  "es": {
+    "title": "Quiénes Somos"
+  }
+}

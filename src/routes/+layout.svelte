@@ -26,7 +26,7 @@
     href="/{locale}"
     class="flex flex-row items-center gap-2 hover:cursor-pointer"
   >
-    <img src="/logo.svg" class="h-10" alt="ESPOLETA" />
+    <img src="/logo.svg" class="h-10 w-20 object-contain" alt="ESPOLETA" />
     <div class="text-green-800">
       <div><span class="font-bold">ESPOLETA</span> Tecnologías</div>
       <div class="text-xs">You need it. We make it true.</div>
@@ -36,27 +36,14 @@
   <div
     class="uppercase hidden lg:flex lg:flex-row flex-col gap-4 items-center text-green-800 font-medium text-center"
   >
-    <a
-      href="/{locale}/about-us"
-      class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
-    >
-      quienes somos
-    </a>
-    <a
-      href="/{locale}/contact"
-      class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
-      >contactenos</a
-    >
-    <a
-      href="/{locale}/blog"
-      class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
-      >blog</a
-    >
-    <a
-      href="https://store.espoletatecnologias.com"
-      class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
-      >tienda</a
-    >
+    {#each data.nav_links as nav_link}
+      <a
+        href="/{locale}{nav_link.en.url}"
+        class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
+      >
+        {nav_link[locale].title}
+      </a>
+    {/each}
   </div>
   <div class="flex flex-row items-center pl-16">
     <a

@@ -28,7 +28,11 @@
         class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 aspect-square bg-gray-400 bg-opacity-10 backdrop-blur-[2px]"
         style="clip-path: url(#cp);"
       ></div>
-      <img src={LandingPage.en.header_image} alt="vortice-station" />
+      <img
+        src={LandingPage.en.header_image}
+        alt="vortice-station"
+        class="w-full h-[50vh] object-contain"
+      />
     </div>
   </div>
 

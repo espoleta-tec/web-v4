@@ -120,3 +120,14 @@ collections:
       - { label: 'Name', name: 'name', widget: string }
       - { label: 'Description', name: 'description', widget: text, i18n: true }
       - { label: 'Photo', name: 'photo', widget: image }
+  - label: Nav Link
+    name: nav_links
+    folder: 'src/lib/content/nav_links'
+    extension: json
+    create: true
+    identifier_field: url
+    i18n: true
+    fields:
+      - {label: Title, name: title, widget: string, i18n: true}
+      - {label: URL, name: url, widget: string}
+      - {label: Is Absolute, name: is_absolute, widget: boolean, default: false}
