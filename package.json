@@ -10,7 +10,7 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
-    "deploy": "npm run build && echo 'espoletatecnologias.com' > ./build/CNAME && npx gh-pages -d build -t true -u \"github-actions-bot\" <support+actions@github.com> "
+    "deploy": "npm run build && echo 'espoletatecnologias.com' > ./build/CNAME && npx gh-pages -d build -t true"
   },
   "devDependencies": {
     "@iconify/svelte": "^4.0.2",
