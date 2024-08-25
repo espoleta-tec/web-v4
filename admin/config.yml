@@ -142,7 +142,7 @@ collections:
       - {label: 'Name', name: 'name', widget: string}
       - {label: 'Description', name: 'description', widget: text, i18n: true}
       - {label: 'Logo', name: 'logo', widget: image}
-      - {label: 'Link', name: 'link', widget: string, default: null}
+      - {label: 'Link', name: 'link', widget: string, default: null, required: false}
   - label: Product
     name: products
     folder: 'src/lib/content/products'
