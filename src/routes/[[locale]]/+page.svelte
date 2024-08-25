@@ -4,6 +4,8 @@
   /** @type{ 'en' | 'es' } */
   const locale = data.locale;
 
+  const products = data.products;
+
   import { LandingPage } from '$lib';
 </script>
 
@@ -74,10 +76,25 @@
   </div>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-    <div class="bg-green-600 text-white text-center">a</div>
-    <div class="bg-green-600 text-white text-center">b</div>
-    <div class="bg-green-600 text-white text-center">c</div>
-    <div class="bg-green-600 text-white text-center">d</div>
+    {#each products as prod, i}
+      <div
+        class="text-center flex flex-col items-center relative bg-gray-100 p-4"
+      >
+        <div
+          class="absolute top-4 left-4 p-4 min-h-16 aspect-square bg-green-600 text-white flex flex-col justify-center items-center"
+        >
+          <div>{i + 1}</div>
+        </div>
+        <img
+          src={prod.en.logo}
+          class="object-contain h-60 aspect-square"
+          alt={prod[locale].alt_text}
+        />
+        <div class="text-xl font-medium text-green-800">
+          {prod[locale].name}
+        </div>
+      </div>
+    {/each}
   </div>
 </section>
 
