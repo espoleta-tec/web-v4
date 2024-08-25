@@ -131,3 +131,28 @@ collections:
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: URL, name: url, widget: string}
       - {label: Is Absolute, name: is_absolute, widget: boolean, default: false}
+  - label: Client
+    name: clients
+    folder: 'src/lib/content/clients'
+    extension: json
+    create: true
+    identifier_field: name
+    i18n: true
+    fields:
+      - {label: 'Name', name: 'name', widget: string}
+      - {label: 'Description', name: 'description', widget: text, i18n: true}
+      - {label: 'Logo', name: 'logo', widget: image}
+      - {label: 'Link', name: 'link', widget: string, default: null}
+  - label: Product
+    name: products
+    folder: 'src/lib/content/products'
+    extension: json
+    create: true
+    identifier_field: name
+    i18n: true
+    fields:
+      - {label: 'Name', name: 'name', widget: string, i18n: true}
+      - {label: 'Description', name: 'description', widget: text, i18n: true}
+      - {label: 'Logo', name: 'logo', widget: image}
+      - {label: 'Link', name: 'link', widget: string, default: null, required: false}
+      - {label: 'Alt Text', name: alt_text, widget: string, i18n: true, required: false}
