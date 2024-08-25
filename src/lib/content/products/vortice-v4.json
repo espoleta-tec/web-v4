@@ -1,0 +1,13 @@
+{
+  "en": {
+    "logo": "https://res.cloudinary.com/lazaroofarrill/image/upload/v1724506089/espoleta-web/station_scwn3a.png",
+    "name": "VORTICE V4",
+    "description": "The fourth VORTICE weather station.",
+    "alt_text": "VORTICE V4 weather station."
+  },
+  "es": {
+    "name": "VORTICE V4",
+    "description": "The fourth VORTICE weather station.",
+    "alt_text": "VORTICE V4 weather station."
+  }
+}

@@ -10,7 +10,7 @@
 </script>
 
 <!-- Head section -->
-<section class="relative py-8 overflow-hidden px-16">
+<section class="relative py-8 overflow-hidden px-4 sm:px-16">
   <img
     src="/bg-pattern.svg"
     alt=""
@@ -60,11 +60,11 @@
 </section>
 
 <!-- Our products -->
-<section class="flex flex-col gap-8 px-16 py-8">
+<section class="flex flex-col gap-8 px-4 sm:px-16 py-8">
   <div
     class="text-5xl text-green-800 font-regular font-display text-center flex flex-row justify-center"
   >
-    <div class="w-1/2">
+    <div class="w-full md:w-3/4 lg:w-1/2">
       {LandingPage[locale].our_products_title}
     </div>
   </div>
@@ -75,7 +75,7 @@
     laborum porro nihil necessitatibus magnam modi expedita aperiam natus!
   </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-auto gap-4">
     {#each products as prod, i}
       <div
         class="text-center flex flex-col items-center relative bg-gray-100 p-4"
@@ -99,22 +99,31 @@
 </section>
 
 <!-- Our Clients -->
-<section class="py-8 px-16">
+<section class="py-8 px-4 sm:px-16">
   <div
-    class="text-5xl text-green-800 font-regular font-display flex flex-row justify-center uppercase text-center"
+    class="text-5xl text-green-800 font-regular font-display flex flex-row uppercase text-center justify-center"
   >
     {LandingPage[locale].our_clients}
   </div>
-  <div class="grid grid-cols-4">
-    <div>a</div>
-    <div>a</div>
-    <div>a</div>
-    <div>a</div>
+  <div class="flex flex-row flex-wrap">
+    {#each data.clients as client}
+      <div
+        class="flex flex-col items-center flex-grow w-full sm:w-1/2 md:w-1/4"
+      >
+        <div class="text-center text-xl text-green-800">{client.en.name}</div>
+        <img
+          src={client.en.logo}
+          alt="client-logo"
+          class="h-40 aspect-square object-cover"
+        />
+        <div></div>
+      </div>
+    {/each}
   </div>
 </section>
 
 <!-- Features -->
-<section class="py-8 px-16 gap-8 flex flex-row flex-wrap">
+<section class="py-8 px-4 sm:px-16 gap-8 flex flex-row flex-wrap">
   <div class="flex flex-col gap-8 w-full lg:w-7/12">
     <div
       class="text-5xl text-green-800 font-regular font-display flex flex-row justify-center uppercase"

@@ -20,14 +20,14 @@
 </svelte:head>
 
 <header
-  class="flex flex-row py-8 px-16 bg-gray-50 shadow-sm w-full sticky top-0 left-0 z-50"
+  class="flex flex-row py-8 px-4 md:px-16 bg-gray-50 shadow-sm w-full sticky top-0 left-0 z-50"
 >
   <a
     href="/{locale}"
     class="flex flex-row items-center gap-2 hover:cursor-pointer"
   >
     <img src="/logo.svg" class="h-10 w-20 object-contain" alt="ESPOLETA" />
-    <div class="text-green-800">
+    <div class="text-green-800 hidden sm:inline-block">
       <div><span class="font-bold">ESPOLETA</span> Tecnologías</div>
       <div class="text-xs">You need it. We make it true.</div>
     </div>
