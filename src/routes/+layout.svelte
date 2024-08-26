@@ -70,7 +70,6 @@
         href="/{locale}{nav_link.en.url}"
         class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
       >
-        data-sveltekit-reload
         {nav_link[locale].title}
       </a>
     {/each}
