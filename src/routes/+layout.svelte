@@ -30,11 +30,11 @@
     class="flex flex-row items-center gap-2 hover:cursor-pointer"
   >
     <img src="/logo.svg" class="h-10 w-20 object-contain" alt="ESPOLETA" />
-    <div class="text-green-800 hidden lg:inline-block">
-      <div><span class="font-bold">ESPOLETA</span> Tecnologías</div>
-      <div class="text-xs">You need it. We make it true.</div>
-    </div>
-  </a>
+    <div class="hidden lg:inline-block">
+      <div>{@html data.layout_data.header_title}</div>
+      <div class="text-xs font-medium">{data.layout_data.header_subtitle}</div>
+    </div></a
+  >
   <div class="flex-grow"></div>
   <div class="relative lg:hidden flex flex-row items-center dropdown">
     <div
@@ -43,7 +43,7 @@
       class="border-2 border-transparent hover:border-green-800 p-1 text-2xl"
     >
       <div class="flex flex-row items-center gap-2 uppercase">
-        <Icon src={FiMenu} />{data.menu_text}
+        <Icon src={FiMenu} />{data.layout_data.menu_text}
       </div>
     </div>
     <div

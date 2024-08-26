@@ -17,6 +17,6 @@ export async function load({ params, url }) {
     locale,
     nav_links: await Promise.all(nav_links),
     pathname: url.pathname,
-    menu_text: layout_content[locale].menu_text
+    layout_data: layout_content[locale]
   };
 }

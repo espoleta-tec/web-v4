@@ -101,11 +101,11 @@
 <!-- Our Clients -->
 <section class="py-8 px-4 sm:px-16">
   <div
-    class="text-5xl text-green-800 font-regular font-display flex flex-row uppercase text-center justify-center"
+    class="text-5xl p-4 text-green-800 font-regular font-display flex flex-row uppercase text-center justify-center"
   >
     {LandingPage[locale].our_clients}
   </div>
-  <div class="flex flex-row flex-wrap">
+  <div class="flex flex-row flex-wrap gap-4">
     {#each data.clients as client}
       <div
         class="flex flex-col items-center flex-grow w-full sm:w-1/2 md:w-1/4"

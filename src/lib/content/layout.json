@@ -1,8 +1,12 @@
 {
   "en": {
-    "menu_text": "Menu"
+    "menu_text": "Menu",
+    "header_title": "<span class=\"text-green-800 font-bold\">ESPOLETA</span> Technologies",
+    "header_subtitle": "Yo need it. We make it."
   },
   "es": {
-    "menu_text": "Menú"
+    "menu_text": "Menú",
+    "header_title": "<span class=\"text-green-800 font-bold\">ESPOLETA</span> Tecnologías",
+    "header_subtitle": "Lo necesitas? Lo hacemos."
   }
 }

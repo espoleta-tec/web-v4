@@ -113,10 +113,10 @@ collections:
         file: src/lib/content/layout.json
         i18n: true
         fields:
-          - label: Menu Text
-            name: menu_text
-            widget: string
-            i18n: true
+          - {label: Menu Text, name: menu_text, widget: string, i18n: true }
+          - {label: Header title, name: header_title, widget: text, i18n: true}
+          - {label: Header subtitle, name: header_subtitle, widget: text, i18n: true}
+
 
   - label: Team Member
     name: team_members
