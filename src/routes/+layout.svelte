@@ -6,7 +6,7 @@
   const locale = data.locale;
 
   import { Icon } from 'svelte-icons-pack';
-  import { FaOutline, FaSolidM } from 'svelte-icons-pack/fa';
+  import { FiMenu } from 'svelte-icons-pack/fi';
 </script>
 
 <svelte:head>
@@ -40,20 +40,23 @@
     <input id="check01" type="checkbox" name="menu" />
     <label
       for="check01"
-      class="border-2 border-transparent hover:border-green-800 p-1">Menu</label
+      class="border-2 border-transparent hover:border-green-800 p-1 text-2xl"
     >
+      <div class="flex flex-row items-center gap-2 uppercase">
+        <Icon src={FiMenu} />{data.menu_text}
+      </div>
+    </label>
     <ul
-      class="submenu w-auto min-w-64 absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-full bg-gray-100 p-4 text-center text-xl flex flex-col gap-4"
+      class="submenu w-auto min-w-64 absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-full bg-gray-50 shadow-md p-4 text-center text-xl flex flex-col gap-4"
     >
       {#each data.nav_links as nav_link}
-        <li>
-          <a
-            href="/{locale}{nav_link.en.url}"
-            class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
-          >
-            {nav_link[locale].title}
-          </a>
-        </li>
+        <a
+          data-sveltekit-reload
+          href="/{locale}{nav_link.en.url}"
+          class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
+        >
+          {nav_link[locale].title}
+        </a>
       {/each}
     </ul>
   </div>
@@ -63,9 +66,11 @@
   >
     {#each data.nav_links as nav_link}
       <a
+        data-sveltekit-reload
         href="/{locale}{nav_link.en.url}"
         class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
       >
+        data-sveltekit-reload
         {nav_link[locale].title}
       </a>
     {/each}

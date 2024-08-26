@@ -11,9 +11,12 @@ export async function load({ params, url }) {
     nav_links.push(nav_links_modules[path]().then((mod) => mod.default));
   }
 
+  const layout_content = await import('$lib/content/layout.json');
+
   return {
     locale,
     nav_links: await Promise.all(nav_links),
-    pathname: url.pathname
+    pathname: url.pathname,
+    menu_text: layout_content[locale].menu_text
   };
 }
