@@ -1,4 +1,4 @@
-export async function load({ params }) {
+export async function load({ params, url }) {
   /** @type{('en' | 'es')} */
   const locale = /** @type{any} */ (params.locale ?? 'en'); // prettier-ignore
 
@@ -13,6 +13,7 @@ export async function load({ params }) {
 
   return {
     locale,
-    nav_links: await Promise.all(nav_links)
+    nav_links: await Promise.all(nav_links),
+    pathname: url.pathname
   };
 }

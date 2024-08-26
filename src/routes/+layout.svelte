@@ -4,6 +4,9 @@
   export let data;
 
   const locale = data.locale;
+
+  import { Icon } from 'svelte-icons-pack';
+  import { FaOutline, FaSolidM } from 'svelte-icons-pack/fa';
 </script>
 
 <svelte:head>
@@ -33,6 +36,28 @@
     </div>
   </a>
   <div class="flex-grow"></div>
+  <div class="relative lg:hidden flex flex-row items-center">
+    <input id="check01" type="checkbox" name="menu" />
+    <label
+      for="check01"
+      class="border-2 border-transparent hover:border-green-800 p-1">Menu</label
+    >
+    <ul
+      class="submenu w-auto min-w-64 absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-full bg-gray-100 p-4 text-center text-xl flex flex-col gap-4"
+    >
+      {#each data.nav_links as nav_link}
+        <li>
+          <a
+            href="/{locale}{nav_link.en.url}"
+            class="hover:bg-green-800 hover:text-white p-2 hover:cursor-pointer"
+          >
+            {nav_link[locale].title}
+          </a>
+        </li>
+      {/each}
+    </ul>
+  </div>
+  <div class="flex-grow"></div>
   <div
     class="uppercase hidden lg:flex lg:flex-row flex-col gap-4 items-center text-green-800 font-medium text-center"
   >
@@ -45,17 +70,17 @@
       </a>
     {/each}
   </div>
-  <div class="flex flex-row items-center pl-16">
+  <div class="flex flex-row items-center lg:pl-16">
     <a
       data-sveltekit-reload
       class="mx-2 px-2 {locale === 'es' ? 'bg-green-800 text-white' : ''}"
-      href="/es">ES</a
+      href={data.pathname.replace(/es|en/, 'es')}>ES</a
     >
     /
     <a
       data-sveltekit-reload
       class="mx-2 px-2 {locale === 'en' ? 'bg-green-800 text-white' : ''}"
-      href="/en">EN</a
+      href={data.pathname.replace(/es|en/, 'en')}>EN</a
     >
   </div>
 </header>
@@ -67,5 +92,27 @@
 <style lang="postcss">
   :global(html) {
     background-color: theme(colors.gray.50);
+  }
+
+  /*hide the inputs/checkmarks and submenu*/
+  input,
+  ul.submenu {
+    display: none;
+  }
+
+  /*position the label*/
+  label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+
+  /*show the submenu when input is checked*/
+  input:checked ~ ul.submenu {
+    display: flex;
+  }
+
+  input:checked ~ label {
+    @apply border-green-800;
   }
 </style>
