@@ -30,24 +30,24 @@
     class="flex flex-row items-center gap-2 hover:cursor-pointer"
   >
     <img src="/logo.svg" class="h-10 w-20 object-contain" alt="ESPOLETA" />
-    <div class="text-green-800 hidden sm:inline-block">
+    <div class="text-green-800 hidden lg:inline-block">
       <div><span class="font-bold">ESPOLETA</span> Tecnologías</div>
       <div class="text-xs">You need it. We make it true.</div>
     </div>
   </a>
   <div class="flex-grow"></div>
-  <div class="relative lg:hidden flex flex-row items-center">
-    <input id="check01" type="checkbox" name="menu" />
-    <label
-      for="check01"
+  <div class="relative lg:hidden flex flex-row items-center dropdown">
+    <div
+      tabindex="0"
+      role="button"
       class="border-2 border-transparent hover:border-green-800 p-1 text-2xl"
     >
       <div class="flex flex-row items-center gap-2 uppercase">
         <Icon src={FiMenu} />{data.menu_text}
       </div>
-    </label>
+    </div>
     <ul
-      class="submenu w-auto min-w-64 absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-full bg-gray-50 shadow-md p-4 text-center text-xl flex flex-col gap-4"
+      class="dropdown-content w-auto min-w-64 absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-full bg-gray-50 shadow-md p-4 text-center text-xl flex flex-col gap-4"
     >
       {#each data.nav_links as nav_link}
         <a
@@ -96,27 +96,5 @@
 <style lang="postcss">
   :global(html) {
     background-color: theme(colors.gray.50);
-  }
-
-  /*hide the inputs/checkmarks and submenu*/
-  input,
-  ul.submenu {
-    display: none;
-  }
-
-  /*position the label*/
-  label {
-    position: relative;
-    display: block;
-    cursor: pointer;
-  }
-
-  /*show the submenu when input is checked*/
-  input:checked ~ ul.submenu {
-    display: flex;
-  }
-
-  input:checked ~ label {
-    @apply border-green-800;
   }
 </style>
