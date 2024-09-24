@@ -75,7 +75,9 @@
     laborum porro nihil necessitatibus magnam modi expedita aperiam natus!
   </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-auto gap-4">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(16, minmax(0, 1fr))] gap-4"
+  >
     {#each products as prod, i}
       <div
         class="text-center flex flex-col items-center relative bg-gray-100 p-4"
